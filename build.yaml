@@ -1,0 +1,14 @@
+targets:
+  $default:
+    builders:
+
+      slang_build_runner:
+        options:
+          base_locale: en
+          input_directory: lib/presentation/i18n/translations
+          input_file_pattern: .i18n.yaml
+          output_directory: lib/presentation/i18n
+          output_file_name: translations.g.dart
+          translation_class_visibility: public
+          locale_handling: true
+          flutter_integration: true
