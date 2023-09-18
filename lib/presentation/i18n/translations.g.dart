@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 1
-/// Strings: 1
+/// Strings: 2
 ///
-/// Built on 2023-08-13 at 09:14 UTC
+/// Built on 2023-09-18 at 18:26 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -150,6 +150,7 @@ class TranslationsEn implements BaseTranslations<AppLocale, TranslationsEn> {
 
 	// Translations
 	late final TranslationsExampleEn example = TranslationsExampleEn._(_root);
+	late final TranslationsErrorMessageEn error_message = TranslationsErrorMessageEn._(_root);
 }
 
 // Path: example
@@ -162,6 +163,16 @@ class TranslationsExampleEn {
 	String get hello => 'hello';
 }
 
+// Path: error_message
+class TranslationsErrorMessageEn {
+	TranslationsErrorMessageEn._(this._root);
+
+	final TranslationsEn _root; // ignore: unused_field
+
+	// Translations
+	String get general => 'Something went wrong';
+}
+
 /// Flat map(s) containing all translations.
 /// Only for edge cases! For simple maps, use the map function of this library.
 
@@ -169,6 +180,7 @@ extension on TranslationsEn {
 	dynamic _flatMapFunction(String path) {
 		switch (path) {
 			case 'example.hello': return 'hello';
+			case 'error_message.general': return 'Something went wrong';
 			default: return null;
 		}
 	}
