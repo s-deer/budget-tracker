@@ -47,6 +47,7 @@ dependencies:
   #Utils
   gap: ^3.0.1
   loggy: ^2.0.3
+  flutter_svg: ^2.0.7
 
 dev_dependencies:
   flutter_test:
@@ -68,10 +69,12 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/png/
+    - assets/svg/
 
 flutter_gen:
   output: lib/presentation/gen/
+  integrations:
+    flutter_svg: true
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

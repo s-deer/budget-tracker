@@ -1,5 +1,9 @@
 example:
   hello: hello
 
+error_page:
+  title: Oops..
+  message: Something went wrong
+  go_back: Okay
 error_message:
   general: Something went wrong

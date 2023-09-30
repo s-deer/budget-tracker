@@ -12,5 +12,8 @@ class AppRouter extends _$AppRouter {
           initial: true,
           page: ExampleRoute.page,
         ),
+        AutoRoute(
+          page: ErrorRoute.page,
+        ),
       ];
 }

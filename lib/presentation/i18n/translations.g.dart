@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 1
-/// Strings: 2
+/// Strings: 5
 ///
-/// Built on 2023-09-18 at 18:26 UTC
+/// Built on 2023-09-30 at 20:19 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -150,6 +150,7 @@ class TranslationsEn implements BaseTranslations<AppLocale, TranslationsEn> {
 
 	// Translations
 	late final TranslationsExampleEn example = TranslationsExampleEn._(_root);
+	late final TranslationsErrorPageEn error_page = TranslationsErrorPageEn._(_root);
 	late final TranslationsErrorMessageEn error_message = TranslationsErrorMessageEn._(_root);
 }
 
@@ -161,6 +162,18 @@ class TranslationsExampleEn {
 
 	// Translations
 	String get hello => 'hello';
+}
+
+// Path: error_page
+class TranslationsErrorPageEn {
+	TranslationsErrorPageEn._(this._root);
+
+	final TranslationsEn _root; // ignore: unused_field
+
+	// Translations
+	String get title => 'Oops..';
+	String get message => 'Something went wrong';
+	String get go_back => 'Okay';
 }
 
 // Path: error_message
@@ -180,6 +193,9 @@ extension on TranslationsEn {
 	dynamic _flatMapFunction(String path) {
 		switch (path) {
 			case 'example.hello': return 'hello';
+			case 'error_page.title': return 'Oops..';
+			case 'error_page.message': return 'Something went wrong';
+			case 'error_page.go_back': return 'Okay';
 			case 'error_message.general': return 'Something went wrong';
 			default: return null;
 		}
