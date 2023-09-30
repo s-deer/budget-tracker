@@ -5,5 +5,11 @@ error_page:
   title: Oops..
   message: Something went wrong
   go_back: Okay
+
+home_page:
+  accounts: Accounts
+  transactions: Transactions
+  categories: Categories
+
 error_message:
   general: Something went wrong

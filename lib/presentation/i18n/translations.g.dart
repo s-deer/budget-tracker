@@ -4,9 +4,9 @@
 /// To regenerate, run: `dart run slang`
 ///
 /// Locales: 1
-/// Strings: 5
+/// Strings: 8
 ///
-/// Built on 2023-09-30 at 20:19 UTC
+/// Built on 2023-09-30 at 20:21 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -151,6 +151,7 @@ class TranslationsEn implements BaseTranslations<AppLocale, TranslationsEn> {
 	// Translations
 	late final TranslationsExampleEn example = TranslationsExampleEn._(_root);
 	late final TranslationsErrorPageEn error_page = TranslationsErrorPageEn._(_root);
+	late final TranslationsHomePageEn home_page = TranslationsHomePageEn._(_root);
 	late final TranslationsErrorMessageEn error_message = TranslationsErrorMessageEn._(_root);
 }
 
@@ -176,6 +177,18 @@ class TranslationsErrorPageEn {
 	String get go_back => 'Okay';
 }
 
+// Path: home_page
+class TranslationsHomePageEn {
+	TranslationsHomePageEn._(this._root);
+
+	final TranslationsEn _root; // ignore: unused_field
+
+	// Translations
+	String get accounts => 'Accounts';
+	String get transactions => 'Transactions';
+	String get categories => 'Categories';
+}
+
 // Path: error_message
 class TranslationsErrorMessageEn {
 	TranslationsErrorMessageEn._(this._root);
@@ -196,6 +209,9 @@ extension on TranslationsEn {
 			case 'error_page.title': return 'Oops..';
 			case 'error_page.message': return 'Something went wrong';
 			case 'error_page.go_back': return 'Okay';
+			case 'home_page.accounts': return 'Accounts';
+			case 'home_page.transactions': return 'Transactions';
+			case 'home_page.categories': return 'Categories';
 			case 'error_message.general': return 'Something went wrong';
 			default: return null;
 		}
