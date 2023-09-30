@@ -13,15 +13,15 @@ Future<void> bootstrap(Widget Function() callback) async {
   return runLogged(
     () {
       WidgetsFlutterBinding.ensureInitialized();
+      LocaleSettings.useDeviceLocale();
 
       Loggy.initLoggy(
         logPrinter: const MyLoggyPrinter(),
         logOptions: sl(),
       );
 
-      LocaleSettings.useDeviceLocale();
 
-      runApp(TranslationProvider(child: callback()));
+      runApp(callback());
     },
     logger: sl(),
   );

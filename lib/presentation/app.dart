@@ -12,15 +12,22 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = AppTheme.formColor();
+    final router = sl<AppRouter>();
 
-    return MaterialApp.router(
-      theme: theme.light,
-      darkTheme: theme.dark,
-      themeMode: ThemeMode.system,
-      locale: TranslationProvider.of(context).flutterLocale,
-      supportedLocales: AppLocaleUtils.supportedLocales,
-      localizationsDelegates: GlobalMaterialLocalizations.delegates,
-      routerConfig: sl<AppRouter>().config(),
+    return TranslationProvider(
+      child: Builder(
+        builder: (context) {
+          return MaterialApp.router(
+            theme: theme.light,
+            darkTheme: theme.dark,
+            themeMode: ThemeMode.system,
+            locale: TranslationProvider.of(context).flutterLocale,
+            supportedLocales: AppLocaleUtils.supportedLocales,
+            localizationsDelegates: GlobalMaterialLocalizations.delegates,
+            routerConfig: router.config(),
+          );
+        },
+      ),
     );
   }
 }
