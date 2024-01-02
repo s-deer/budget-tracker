@@ -1,5 +1,6 @@
-import 'package:budget_tracker/core/core.dart';
-import 'package:dartz/dartz.dart';
+import 'package:fpdart/fpdart.dart';
+
+import 'core.dart';
 
 abstract class UseCase<P, R> {
   R execute(P param);

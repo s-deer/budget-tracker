@@ -38,7 +38,7 @@ dependencies:
   freezed_annotation: ^2.4.1
 
   #Error handling
-  dartz: ^0.10.1
+  fpdart: ^1.1.0
 
   #Local DB
   drift: ^2.10.0
@@ -58,7 +58,7 @@ dev_dependencies:
   injectable_generator: ^2.1.6
   auto_route_generator: ^7.3.0
   slang_build_runner: ^3.22.0
-  flutter_lints: ^2.0.0
+  flutter_lints: ^3.0.1
   freezed: ^2.4.1
 
 flutter:

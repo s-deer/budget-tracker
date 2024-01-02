@@ -1,11 +1,13 @@
-import 'package:budget_tracker/core/failure.dart';
+import '../core/core.dart';
 import 'package:budget_tracker/presentation/i18n/translations.g.dart';
 import 'package:budget_tracker/presentation/widgets/snack_bar.dart';
 import 'package:flutter/material.dart';
 
 extension SnackBarContextExtension on BuildContext {
-  ScaffoldFeatureController<SnackBar, SnackBarClosedReason> showFailureSnackBar(Failure failure,
-      {bool hidePreviousSnackBar = false}) {
+  ScaffoldFeatureController<SnackBar, SnackBarClosedReason> showFailureSnackBar(
+    Failure failure, {
+    bool hidePreviousSnackBar = false,
+  }) {
     final messenger = ScaffoldMessenger.of(this);
 
     if (hidePreviousSnackBar) {
