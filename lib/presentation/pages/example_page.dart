@@ -5,7 +5,7 @@ import '../i18n/i18n.dart';
 
 @RoutePage()
 class ExamplePage extends StatelessWidget {
-  const ExamplePage({Key? key}) : super(key: key);
+  const ExamplePage({super.key});
 
   @override
   Widget build(BuildContext context) {

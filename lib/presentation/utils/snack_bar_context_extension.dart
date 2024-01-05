@@ -1,4 +1,4 @@
-import '../core/core.dart';
+import '../../core/core.dart';
 import 'package:budget_tracker/presentation/i18n/translations.g.dart';
 import 'package:budget_tracker/presentation/widgets/snack_bar.dart';
 import 'package:flutter/material.dart';
